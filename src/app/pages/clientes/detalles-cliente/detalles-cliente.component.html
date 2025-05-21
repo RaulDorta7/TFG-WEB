@@ -1,0 +1,117 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="p-6 bg-[#282a36] min-h-screen text-gray-300 max-w-4xl mx-auto">
+
+
+  <!-- Información cliente -->
+  <div class="bg-[#44475a] rounded-2xl p-6 shadow-lg mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <p><span class="font-semibold underline text-accent">Nombre:</span> Juan Pérez</p>
+      <p><span class="font-semibold underline text-accent">Teléfono:</span> +34 612 345 678</p>
+    </div>
+    <div>
+      <p><span class="font-semibold underline text-accent">Email:</span> juan.perez&#64;empresa.com</p>
+      <p><span class="font-semibold underline text-accent">País:</span> España</p>
+    </div>
+  </div>
+
+  <!-- Lista de pagos recibidos -->
+  <div class="bg-[#44475a] rounded-2xl p-6 shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Pagos recibidos</h2>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="table-auto w-full text-left border-collapse border border-gray-700">
+        <thead>
+        <tr class="bg-[#373844] text-gray-300">
+          <th class="border border-gray-600 px-4 py-2">Fecha</th>
+          <th class="border border-gray-600 px-4 py-2">Concepto</th>
+          <th class="border border-gray-600 px-4 py-2">Monto</th>
+          <th class="border border-gray-600 px-4 py-2">Estado</th>
+        </tr>
+        </thead>
+        <tbody class="text-gray-300">
+        <tr class="border border-gray-700 hover:bg-[#50536e] cursor-pointer">
+          <td class="border border-gray-600 px-4 py-2">15/05/2025</td>
+          <td class="border border-gray-600 px-4 py-2">Construcción de la interfaz</td>
+          <td class="border border-gray-600 px-4 py-2">€850.00</td>
+          <td class="border border-gray-600 px-4 py-2 text-green-400">Pagado</td>
+        </tr>
+        <tr class="border border-gray-700 hover:bg-[#50536e] cursor-pointer">
+          <td class="border border-gray-600 px-4 py-2">05/05/2025</td>
+          <td class="border border-gray-600 px-4 py-2">Diseño del wireframe</td>
+          <td class="border border-gray-600 px-4 py-2">€320.00</td>
+          <td class="border border-gray-600 px-4 py-2 text-yellow-400">Pendiente</td>
+        </tr>
+        <tr class="border border-gray-700 hover:bg-[#50536e] cursor-pointer">
+          <td class="border border-gray-600 px-4 py-2">28/04/2025</td>
+          <td class="border border-gray-600 px-4 py-2">Pago extra</td>
+          <td class="border border-gray-600 px-4 py-2">€150.00</td>
+          <td class="border border-gray-600 px-4 py-2 text-green-400">Pagado</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Botón para abrir modal -->
+    <div class="flex justify-center my-6">
+      <button class="btn btn-soft btn-accent" onclick="my_modal.showModal()">Añadir pago</button>
+    </div>
+    <!-- Modal -->
+    <dialog id="my_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold mb-5 text-center">Añadir nuevo pago</h3>
+
+        <!-- Formulario de pago -->
+        <form class="space-y-4" onsubmit="event.preventDefault(); /* aquí lógica para guardar */ my_modal.close();">
+          <div class="form-control">
+            <input
+              type="text"
+              id="concepto"
+              placeholder="Concepto de factura"
+              class="input input-bordered w-full"
+              required
+            />
+          </div>
+
+          <div class="form-control">
+            <input
+              type="number"
+              id="monto"
+              placeholder="Monto (€)"
+              class="input input-bordered w-full"
+              min="0"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="form-control">
+            <select
+              id="estado"
+              class="select select-bordered w-full"
+              required
+            >
+              <option value="" disabled selected>Estado</option>
+              <option value="Pagado">Pagado</option>
+              <option value="Pendiente">Pendiente</option>
+            </select>
+          </div>
+
+          <div class="flex justify-end gap-2 pt-4">
+            <button type="submit" class="btn btn-accent">Guardar</button>
+            <form method="dialog">
+              <button class="btn btn-outline">Cancelar</button>
+            </form>
+          </div>
+        </form>
+      </div>
+
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+  </div>
+
+</div>

@@ -1,0 +1,122 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="p-6 bg-[#282a36] min-h-screen text-gray-300">
+
+  <!-- Título del proyecto -->
+  <h1 class="text-3xl font-bold mb-4 text-accent">Web tienda Nike</h1>
+
+  <!-- Información del proyecto -->
+  <div class="bg-[#44475a] rounded-2xl p-6 shadow-lg mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <p><span class="font-semibold underline">Cliente:</span>    Nike</p>
+      <p><span class="font-semibold underline">Fecha de inicio:</span>    10/04/2025</p>
+      <p><span class="font-semibold underline">Fecha final:</span>    30/04/2025</p>
+      <p><span class="font-semibold underline">Estado:</span>
+        <span class="text-warning">     Pendiente</span>
+      </p>
+    </div>
+    <div>
+      <p><span class="font-semibold ">Descripción:</span></p>
+      <p class="mt-2 text-gray-400">
+        Desarrollo completo de la tienda online de Nike, integración de pagos y sistema de gestión de inventario.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección de tareas -->
+  <div class="bg-[#44475a] rounded-2xl p-6 shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Tareas</h2>
+
+    <ul class="space-y-3 mb-6">
+      <li class="flex justify-between items-center bg-[#373844] p-4 rounded-lg">
+        <div>
+          <p class="font-medium">Diseñar wireframes</p>
+          <p class="text-sm text-gray-400">Crear los bocetos iniciales para la tienda.</p>
+        </div>
+        <span class="badge badge-success mt-3">Completado</span>
+      </li>
+      <li class="flex justify-between items-center bg-[#373844] p-4 rounded-lg">
+        <div>
+          <p class="font-medium">Desarrollar frontend</p>
+          <p class="text-sm text-gray-400">Construir la interfaz con Angular y Tailwind CSS.</p>
+        </div>
+        <span class="badge badge-success mt-3">Completado</span>
+      </li>
+      <li class="flex justify-between items-center bg-[#373844] p-4 rounded-lg">
+        <div>
+          <p class="font-medium">Integrar sistema de pagos</p>
+          <p class="text-sm text-gray-400">Añadir métodos de pago seguros.</p>
+        </div>
+        <span class="badge badge-warning mt-3">Pendiente</span>
+      </li>
+      <li class="flex justify-between items-center bg-[#373844] p-4 rounded-lg">
+        <div>
+          <p class="font-medium">Testear la aplicación</p>
+          <p class="text-sm text-gray-400">Realizar pruebas funcionales y de usabilidad.</p>
+        </div>
+        <span class="badge badge-warning mt-3">Pendiente</span>
+      </li>
+      <li class="flex justify-between items-center bg-[#373844] p-4 rounded-lg">
+        <div>
+          <p class="font-medium">Desplegar en producción</p>
+          <p class="text-sm text-gray-400">Configurar hosting y dominio para la tienda.</p>
+        </div>
+        <span class="badge badge-error mt-3">Cancelado</span>
+      </li>
+    </ul>
+
+    <!-- Formulario para añadir tarea -->
+    <div class="flex justify-center my-6">
+      <button class="btn btn-soft btn-accent" onclick="my_modal.showModal()">Nueva tarea</button>
+    </div>
+
+    <dialog id="my_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold mb-5 text-center">Añadir nueva tarea</h3>
+
+        <!-- Formulario -->
+        <form class="space-y-4">
+          <div class="form-control">
+            <input type="text" id="titulo" placeholder="Titulo" class="input input-bordered w-full" />
+          </div>
+
+          <div class="form-control w-full">
+          <textarea
+            id="descripcion"
+            placeholder="Descripción"
+            rows="4"
+            class="textarea textarea-bordered w-full  text-gray-300 border-gray-600 rounded-lg resize-none"
+          ></textarea>
+          </div>
+
+
+          <select
+            required
+            class="p-3 rounded-lg bg-[#282a36] border border-gray-600 text-gray-300 transition"
+          >
+            <option value="Completado" class="bg-[#282a36] text-gray-300">Completado</option>
+            <option value="Pendiente" class="bg-[#282a36] text-gray-300">Pendiente</option>
+            <option value="Cancelado" class="bg-[#282a36] text-gray-300">Cancelado</option>
+          </select>
+
+
+
+
+          <div class="flex justify-end gap-2 pt-4">
+            <button type="submit" class="btn btn-accent">Guardar</button>
+            <form method="dialog">
+              <button class="btn btn-outline">Cancelar</button>
+            </form>
+          </div>
+        </form>
+      </div>
+
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+
+  </div>
+</div>

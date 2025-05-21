@@ -1,0 +1,120 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="card card-border border-secondary bg-base-100 w-full mt-10 mr-4">
+  <div class="card-body">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="card-title text-accent">Clientes</h2>
+
+      <button class="btn btn-soft btn-accent" onclick="my_modal.showModal()">Nuevo cliente</button>
+
+      <dialog id="my_modal" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold mb-5 text-center">Añadir nuevo cliente</h3>
+
+          <!-- Formulario de cliente -->
+          <form class="space-y-4">
+            <div class="form-control">
+              <input type="text" id="nombre" placeholder="Nombre completo" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <input type="email" id="email" placeholder="Correo electrónico" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <input type="tel" id="telefono" placeholder="Teléfono" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <input type="text" id="pais" placeholder="País" class="input input-bordered w-full" />
+            </div>
+
+            <div class="flex justify-end gap-2 pt-4">
+              <button type="submit" class="btn btn-accent">Guardar</button>
+              <form method="dialog">
+                <button class="btn btn-outline">Cancelar</button>
+              </form>
+            </div>
+          </form>
+        </div>
+
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+    </div>
+
+<!--Tabla de clientes -->
+
+    <div class="overflow-x-auto">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>País</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Juan Pérez</td>
+          <td>juan.perez&#64;empresa.com</td>
+          <td>+34 612 345 678</td>
+          <td>España</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Sofía García</td>
+          <td>sofia.garcia&#64;correo.com</td>
+          <td>+52 55 1234 5678</td>
+          <td>México</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Lucas Silva</td>
+          <td>lucas.silva&#64;negocio.com</td>
+          <td>+55 11 91234 5678</td>
+          <td>Brasil</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Emma Johnson</td>
+          <td>emma.johnson&#64;company.com</td>
+          <td>+1 212 555 1234</td>
+          <td>Estados Unidos</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Oliver Müller</td>
+          <td>oliver.mueller&#64;firma.de</td>
+          <td>+49 30 123456</td>
+          <td>Alemania</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Chloe Dubois</td>
+          <td>chloe.dubois&#64;societe.fr</td>
+          <td>+33 1 2345 6789</td>
+          <td>Francia</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Ahmed Hassan</td>
+          <td>ahmed.hassan&#64;business.eg</td>
+          <td>+20 2 1234 5678</td>
+          <td>Egipto</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Sara Lee</td>
+          <td>sara.lee&#64;service.kr</td>
+          <td>+82 10 1234 5678</td>
+          <td>Corea del Sur</td>
+        </tr>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-cliente" routerLinkActive="active">
+          <td>Liam O'Connor</td>
+          <td>liam.oconnor&#64;business.ie</td>
+          <td>+353 1 234 5678</td>
+          <td>Irlanda</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

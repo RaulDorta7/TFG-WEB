@@ -1,0 +1,55 @@
+<nav
+  [ngClass]="{
+    'block': sidebarOpen,
+    'hidden': !sidebarOpen
+  }"
+  class="bg-secondary-content/90 text-base-content w-64 p-4 min-h-screen md:block border-r border-base-300 h-full"
+>
+  <ul class="menu space-y-5 w-full">
+    <li>
+      <a routerLink="/home" routerLinkActive="active"
+         class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-base-300 transition-all "
+         [routerLinkActiveOptions]="{ exact: true }">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        </svg>
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a routerLink="/proyectos" routerLinkActive="active"
+         class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-base-300 transition-all">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+        Proyectos
+      </a>
+    </li>
+    <li>
+      <a routerLink="/clientes" routerLinkActive="active"
+         class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-base-300 transition-all">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.121 17.804A7 7 0 0 1 12 15a7 7 0 0 1 6.879 2.804M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+        </svg>
+        Clientes
+      </a>
+    </li>
+    <li>
+      <a routerLink="/finanzas" routerLinkActive="active"
+         class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-base-300 transition-all">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-coin-euro">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+          <path d="M14.401 8c-.669 -.628 -1.5 -1 -2.401 -1c-2.21 0 -4 2.239 -4 5s1.79 5 4 5c.9 0 1.731 -.372 2.4 -1" />
+          <path d="M7 10.5h4" /><path d="M7 13.5h4" />
+        </svg>
+        Finanzas
+      </a>
+    </li>
+  </ul>
+</nav>

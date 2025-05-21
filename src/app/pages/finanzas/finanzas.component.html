@@ -1,0 +1,94 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="p-6 space-y-6 bg-[#282a36] min-h-screen text-gray-300">
+
+  <!-- Tarjetas resumen -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="bg-[#44475a] shadow-lg rounded-2xl p-5">
+      <h3 class="text-gray-400 text-sm mb-1">Ingresos del mes</h3>
+      <p class="text-2xl font-semibold text-[#50fa7b]">2,550.00€</p>
+    </div>
+
+    <div class="bg-[#44475a] shadow-lg rounded-2xl p-5">
+      <h3 class="text-gray-400 text-sm mb-1">Gastos del mes</h3>
+      <p class="text-2xl font-semibold text-[#ff5555]">790.00€</p>
+    </div>
+
+    <div class="bg-[#44475a] shadow-lg rounded-2xl p-5">
+      <h3 class="text-gray-400 text-sm mb-1">Balance mensual</h3>
+      <p class="text-2xl font-semibold text-info">+1,750.00€</p>
+    </div>
+  </div>
+
+
+
+  <!-- Tabla de movimientos financieros -->
+  <div class="bg-[#44475a] shadow-lg rounded-2xl p-5">
+    <h3 class="text-lg font-bold mb-4 text-gray-200">Transacciones recientes</h3>
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full text-left">
+        <thead class="text-sm text-gray-400 border-b border-gray-600">
+        <tr>
+          <th class="pb-2">Fecha</th>
+          <th class="pb-2">Descripción</th>
+          <th class="pb-2">Tipo</th>
+          <th class="pb-2">Monto</th>
+        </tr>
+        </thead>
+        <tbody class="text-sm text-gray-300">
+        <tr class="border-b border-gray-700">
+          <td class="py-2">20/05/2025</td>
+          <td class="py-2">Factura cliente</td>
+          <td class="py-2 text-[#50fa7b]">Ingreso</td>
+          <td class="py-2">$850.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">18/05/2025</td>
+          <td class="py-2">Compra de dominio</td>
+          <td class="py-2 text-[#ff5555]">Gasto</td>
+          <td class="py-2">$12.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">15/05/2025</td>
+          <td class="py-2">Pago de hosting</td>
+          <td class="py-2 text-[#ff5555]">Gasto</td>
+          <td class="py-2">$30.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">10/05/2025</td>
+          <td class="py-2">Venta producto</td>
+          <td class="py-2 text-[#50fa7b]">Ingreso</td>
+          <td class="py-2">$1,200.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">08/05/2025</td>
+          <td class="py-2">Compra de material</td>
+          <td class="py-2 text-[#ff5555]">Gasto</td>
+          <td class="py-2">$400.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">05/05/2025</td>
+          <td class="py-2">Devolución cliente</td>
+          <td class="py-2 text-[#ff5555]">Gasto</td>
+          <td class="py-2">$100.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">02/05/2025</td>
+          <td class="py-2">Ingreso inversión</td>
+          <td class="py-2 text-[#50fa7b]">Ingreso</td>
+          <td class="py-2">$500.00</td>
+        </tr>
+        <tr class="border-b border-gray-700">
+          <td class="py-2">01/05/2025</td>
+          <td class="py-2">Compra software</td>
+          <td class="py-2 text-[#ff5555]">Gasto</td>
+          <td class="py-2">$250.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <img src="../assets/grafico-oscuro.png" alt="Gráfico de ventas" class="h-150 w-auto mx-auto rounded-lg shadow-md" />
+
+</div>

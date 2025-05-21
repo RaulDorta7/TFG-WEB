@@ -1,0 +1,154 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="card card-border border-secondary bg-base-100 w-full mt-10 mr-4">
+  <div class="card-body">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="card-title text-accent">Proyectos</h2>
+
+
+      <button class="btn btn-soft btn-accent" onclick="my_modal.showModal()">Nuevo proyecto</button>
+
+      <dialog id="my_modal" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold mb-5 text-center">Añadir nuevo proyecto</h3>
+
+          <!-- Formulario de proyecto -->
+          <form class="space-y-4">
+            <div class="form-control">
+              <input type="text" id="nombre" placeholder="Nombre" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <input type="text" id="cliente" placeholder="Cliente" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <label for="fecha_inicio" class="label">Fecha de inicio</label>
+              <input type="date" id="fecha_inicio" placeholder="Fecha de inicio" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <label for="fecha_fin" class="label">Fecha final</label>
+              <input type="date" id="fecha_fin"  class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control">
+              <label class="label cursor-pointer">
+                <span class="label-text">¿Proyecto completado?</span>
+                <input type="checkbox" id="estado" class="checkbox checkbox-accent" />
+              </label>
+            </div>
+
+
+            <div class="flex justify-end gap-2 pt-4">
+              <button type="submit" class="btn btn-accent">Guardar</button>
+              <form method="dialog">
+                <button class="btn btn-outline">Cancelar</button>
+              </form>
+            </div>
+          </form>
+        </div>
+
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Proyecto</th>
+          <th>Cliente</th>
+          <th>Fecha de inicio</th>
+          <th>Fecha final</th>
+          <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Web tienda</td>
+          <td>Nike</td>
+          <td>10/04/2025</td>
+          <td>30/04/2025</td>
+          <td><span class="badge badge-success">Completado</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>App móvil</td>
+          <td>Supercell</td>
+          <td>05/05/2025</td>
+          <td>13/05/2025</td>
+          <td><span class="badge badge-warning">Pendiente</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Diseño de logo</td>
+          <td>Logos Designs</td>
+          <td>23/01/2025</td>
+          <td>28/02/2025</td>
+          <td><span class="badge badge-error">Cancelado</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Campaña marketing</td>
+          <td>Coca-Cola</td>
+          <td>01/03/2025</td>
+          <td>30/06/2025</td>
+          <td><span class="badge badge-success">Completado</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Rediseño web</td>
+          <td>Spotify</td>
+          <td>15/04/2025</td>
+          <td>15/07/2025</td>
+          <td><span class="badge badge-warning">Pendiente</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Desarrollo API</td>
+          <td>Amazon</td>
+          <td>20/02/2025</td>
+          <td>20/05/2025</td>
+          <td><span class="badge badge-success">Completado</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Optimización SEO</td>
+          <td>Booking.com</td>
+          <td>10/05/2025</td>
+          <td>10/06/2025</td>
+          <td><span class="badge badge-warning">Pendiente</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Implementación CRM</td>
+          <td>HubSpot</td>
+          <td>01/01/2025</td>
+          <td>31/03/2025</td>
+          <td><span class="badge badge-error">Cancelado</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>App escritorio</td>
+          <td>Adobe</td>
+          <td>12/04/2025</td>
+          <td>12/08/2025</td>
+          <td><span class="badge badge-warning">Pendiente</span></td>
+        </tr>
+
+        <tr class="cursor-pointer hover:bg-neutral" routerLink="/detalles-proyecto" routerLinkActive="active">
+          <td>Blog corporativo</td>
+          <td>Microsoft</td>
+          <td>05/03/2025</td>
+          <td>05/04/2025</td>
+          <td><span class="badge badge-success">Completado</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

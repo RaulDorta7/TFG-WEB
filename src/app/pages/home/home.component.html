@@ -1,0 +1,157 @@
+<!-- Header -->
+<app-header [titulo]="titulo()"></app-header>
+
+<div class="flex stats shadow justify-center mt-10 bg-primary-content/20">
+  <div class="stat place-items-center">
+    <div class="stat-title">Tareas pendientes</div>
+    <div class="stat-value">5</div>
+    <div class="stat-desc">Desde el 1 de enero al 1 de mayo</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Pagos pendientes</div>
+    <div class="stat-value text-secondary">2</div>
+    <div class="stat-desc text-secondary"></div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Facturación este mes</div>
+    <div class="stat-value">120,000$</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
+  </div>
+
+</div>
+
+<div class="flex flex-col sm:flex-row justify-center">
+
+  <!-- Proyectos -->
+  <div class="card card-border border-secondary bg-base-100 w-120 mt-10 mr-4">
+    <div class="card-body">
+      <h2 class="card-title justify-center text-accent">Proyectos recientes</h2>
+
+      <div class="overflow-x-auto">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Proyecto</th>
+            <th>Cliente</th>
+            <th>Estado</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>Web tienda</td>
+            <td>Nike</td>
+            <td class="badge badge-success mt-3">Completado</td>
+          </tr>
+
+          <tr>
+            <td>App móvil</td>
+            <td>Supercell</td>
+            <td class="badge badge-warning mt-3">Pendiente</td>
+          </tr>
+
+          <tr>
+            <td>Diseño de logo</td>
+            <td>Logos Designs</td>
+            <td class="badge badge-error mt-3">Cancelado</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pagos recientes -->
+  <div class="card card-border border-secondary bg-base-100 w-120 mt-10 h-auto">
+    <div class="card-body">
+      <h2 class="card-title justify-center text-accent">Últimos pagos</h2>
+
+      <div class="overflow-x-auto">
+        <table class="table">
+          <!-- head -->
+          <thead>
+          <tr>
+            <th>Pago</th>
+            <th>Cliente</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- row 1 -->
+          <tr>
+            <td>#0001</td>
+            <td>Nike</td>
+            <td>12,500$</td>
+            <td class="badge badge-success mt-3">Pagado</td>
+          </tr>
+          <!-- row 2 -->
+          <tr>
+            <td>#0002</td>
+            <td>Supercell</td>
+            <td>30,000$</td>
+            <td class="badge badge-warning mt-3">Pendiente</td>
+
+          </tr>
+          <!-- row 3 -->
+          <tr>
+            <td>#0003</td>
+            <td>Logos Designs</td>
+            <td>5,700$</td>
+            <td class="badge badge-error mt-3">Cancelado</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="card card-border border-secondary bg-base-100 w-full mt-10 h-auto">
+  <div class="card-body">
+    <h2 class="card-title justify-center text-accent">Tareas pendientes</h2>
+
+    <div class="overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+        <tr>
+          <th>Tarea</th>
+          <th>Proyecto</th>
+          <th>Fecha inicio</th>
+          <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- row 1 -->
+        <tr>
+          <td>Meeting con cliente</td>
+          <td>App móvil</td>
+          <td>12/05/2025</td>
+          <td>Reunión con el departamento de marketing</td>
+        </tr>
+        <!-- row 2 -->
+        <tr>
+          <td>Diseño de mockup</td>
+          <td>Web tienda</td>
+          <td>05/02/2025</td>
+          <td>Diseñar el estilo de la web</td>
+        </tr>
+        <!-- row 3 -->
+        <tr>
+          <td>Colorear logo</td>
+          <td>Logos Designs</td>
+          <td>10/04/2025</td>
+          <td>Elegir paleta de colores del logo</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
